@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import ninja.usefulbits.init.UBItems;
 import ninja.usefulbits.proxy.IProxy;
 import ninja.usefulbits.util.LogHelper;
 
@@ -26,6 +27,8 @@ public class UsefulBits
     public void preInit(FMLPreInitializationEvent event)
     {
         LogHelper.info("Pre-Initialization has begun :)");
+
+        UBItems.init();
     }
 
     @Mod.EventHandler
