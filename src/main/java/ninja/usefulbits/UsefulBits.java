@@ -9,13 +9,14 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import ninja.usefulbits.init.UBItems;
 import ninja.usefulbits.proxy.IProxy;
 import ninja.usefulbits.util.LogHelper;
+import ninja.usefulbits.util.VersionChecker;
 
 @Mod(modid = UsefulBits.MOD_ID, name = UsefulBits.MOD_NAME, version = UsefulBits.MOD_VERSION)
 public class UsefulBits
 {
     public static final String MOD_ID = "UsefulBits";
     public static final String MOD_NAME = "Useful Bits";
-    public static final String MOD_VERSION = "1.7.10-01";
+    public static final String MOD_VERSION = "1.7.10-02";
 
     @Mod.Instance
     public static UsefulBits instance;
@@ -35,6 +36,8 @@ public class UsefulBits
     public void init(FMLInitializationEvent event)
     {
         LogHelper.info("Initialization has begun :)");
+
+        new VersionChecker().doYourThing();
     }
 
     @Mod.EventHandler
