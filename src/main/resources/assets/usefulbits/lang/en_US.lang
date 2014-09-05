@@ -1,5 +1,8 @@
 # Items
 item.usefulbits:darkenedIngot.name=Darkened Ingot
 
+# Blocks
+tile.usefulbits:darkenedBlock.name=Darkened Block
+
 # Creative Tabs
-ItemGroup.usefulbits=Useful Bits (General)
+itemGroup.usefulbits=Useful Bits (General)
