@@ -6,6 +6,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import ninja.usefulbits.init.UBBlocks;
+import ninja.usefulbits.init.UBCraftingRecipes;
 import ninja.usefulbits.init.UBItems;
 import ninja.usefulbits.proxy.IProxy;
 import ninja.usefulbits.util.LogHelper;
@@ -16,7 +18,7 @@ public class UsefulBits
 {
     public static final String MOD_ID = "UsefulBits";
     public static final String MOD_NAME = "Useful Bits";
-    public static final String MOD_VERSION = "1.7.10-02";
+    public static final String MOD_VERSION = "1.7.10-03";
 
     @Mod.Instance
     public static UsefulBits instance;
@@ -30,6 +32,7 @@ public class UsefulBits
         LogHelper.info("Pre-Initialization has begun :)");
 
         UBItems.init();
+        UBBlocks.init();
     }
 
     @Mod.EventHandler
@@ -38,6 +41,8 @@ public class UsefulBits
         LogHelper.info("Initialization has begun :)");
 
         new VersionChecker().doYourThing();
+
+        UBCraftingRecipes.init();
     }
 
     @Mod.EventHandler

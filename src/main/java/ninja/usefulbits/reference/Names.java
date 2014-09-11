@@ -10,4 +10,9 @@ public class Names
     {
         public static final String DARKENED_INGOT = "darkenedIngot";
     }
+
+    public static final class Blocks
+    {
+        public static final String DARKENED_BLOCK = "darkenedBlock";
+    }
 }
